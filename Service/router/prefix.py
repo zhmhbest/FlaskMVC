@@ -1,7 +1,8 @@
 from app import the_app
-from model import the_db
-from flask import request, make_response
+from model.db import the_db
+from flask import request
 from common.flask_base.JsonReturn import make_json_return
+from common.Verify import check_must_keys
 
 
 def get_prefix(n):
@@ -10,8 +11,7 @@ def get_prefix(n):
     return r
 
 
-def check_must_args(args):
-    r = True
-    for item in args:
-        r = r and (item in request.form)
-    return r
+def get_args_without_method():
+    return request.args if 'GET' == request.method else request.form
+
+

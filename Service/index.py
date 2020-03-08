@@ -2,6 +2,9 @@
     请勿修改本文件
 """
 from app import the_app as app
+
+
+# 导入所有注册的接口
 from router import *
 
 
