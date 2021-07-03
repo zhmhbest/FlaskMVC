@@ -1,0 +1,11 @@
+<div id="AppContent">
+<h2>{{title}}</h2>
+<form action="" method="post" onsubmit="return false;">
+    <input name="account" type="text" v-model="formData.account"/>
+    <input name="password" type="password" v-model="formData.password"/>
+    <input type="submit" value="login" @click="onSubmit"/>
+</form>
+<div>
+    <h3 :style="loginStateStyle">{{loginStateText}}</h3>
+</div>
+</div>

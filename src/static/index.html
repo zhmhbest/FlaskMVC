@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>Hello</title>
+<meta charset="UTF-8" />
+</head>
+<body><div id="app"></div></body>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+<script>
+(() => {
+    const debugFlag = false;
+    const debugTail = debugFlag ? `?${new Date().getTime()}` : "";
+    axios.get(`./app.html${debugTail}`).then((response) => {
+        window.template = response.data;
+        // css
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `./app.css${debugTail}`;
+        document.body.appendChild(link);
+        // script
+        const script = document.createElement("script");
+        script.src = `./app.js${debugTail}`;
+        document.body.appendChild(script);
+    });
+})();
+</script>
+</html>

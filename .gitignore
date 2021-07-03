@@ -1,0 +1,9 @@
+/.vscode/
+/.idea/*
+!/.idea/*.iml
+!/.idea/modules.xml
+
+__pycache__/
+dump/
+cache/
+.trash/

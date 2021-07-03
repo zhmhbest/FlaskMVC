@@ -1,0 +1,11 @@
+# Core
+flask==1.0.4
+werkzeug==1.0.1
+
+# Model
+SQLAlchemy==1.3
+flask-sqlalchemy==2.4.1
+flask-mysqldb==0.2.0
+
+# Restful
+flask-restful==0.3.7
