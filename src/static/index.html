@@ -9,7 +9,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
 <script>
 (() => {
-    const debugFlag = false;
+    const debugFlag = true;
     const debugTail = debugFlag ? `?${new Date().getTime()}` : "";
     axios.get(`./app.html${debugTail}`).then((response) => {
         window.template = response.data;
