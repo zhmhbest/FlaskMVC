@@ -1,5 +1,5 @@
 # Core
-flask==1.0.4
+flask==2.3.2
 werkzeug==1.0.1
 
 # Model
